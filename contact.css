@@ -1,5 +1,6 @@
 /* Algemene opmaak */
 * {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -52,6 +53,27 @@ nav ul li a {
     cursor: pointer;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    background-color: #F5F5F5;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Menu Toggle Checkbox */
+#menu-toggle {
+    display: none;
+}
+
 /* Contactsectie */
 main {
     background-color: #363333;
@@ -62,6 +84,11 @@ main {
 
 h1 {
     font-size: 3em;
+    padding-bottom: 20px;
+}
+
+h2 {
+    padding-bottom: 40px;
 }
 
 h1, h2 {
@@ -225,4 +252,84 @@ footer {
     font-size: 1.2rem; 
     color: #F5F5F5;
 }
+
+/* Responsiveness voor iPad en iPhone */
+@media (max-width: 1024px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-content .left-section,
+    .contact-content .right-section,
+    .idee {
+        width: 100%; 
+        margin-bottom: 30px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .contact h1 {
+        font-size: 2rem; 
+    }
+
+    .contact h2 {
+        font-size: 1.2rem;
+    }
+
+    main {
+        padding: 20px; 
+    }
+
+    .contact-content .left-section,
+    .contact-content .right-section {
+        margin-bottom: 20px; 
+    }
+
+    .ideas {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .footer-logo img {
+        max-width: 50%;
+    }
+
+    footer {
+        padding: 20px 10px; 
+        margin-top: 20px; 
+    }
+
+    nav ul {
+        display: none; 
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        text-align: right;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    nav ul li {
+        margin-right: 30px;
+    }
+
+    #menu-toggle:checked + .hamburger + ul {
+        display: flex; 
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .language-switch {
+        display: block;
+        margin-top: 15px; 
+        color: #F5F5F5;
+        cursor: pointer;
+    }
+}
+
 
