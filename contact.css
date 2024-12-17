@@ -1,6 +1,5 @@
 /* Algemene opmaak */
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -61,6 +60,10 @@ main {
     margin: 20px auto;
 }
 
+h1 {
+    font-size: 3em;
+}
+
 h1, h2 {
     color: #F5F5F5;
 }
@@ -96,10 +99,6 @@ strong {
     color: #F5F5F5;
 }
 
-ol, ul {
-    padding-left: 20px;
-}
-
 .contact-content ol, .contact-content ul {
     margin-left: 0;
     padding-left: 1.2em;
@@ -110,7 +109,6 @@ ol, ul {
 .contact-content ul {
     margin-bottom: 15px;
 }
-
 
 /* Footer */
 footer {
@@ -184,14 +182,12 @@ footer {
     color: #F5F5F5;
 }
 
-/* Sociale Media Container */
 .footer-content .social-media {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-/* Titel van Sociale Media */
 .footer-content .social-media-title {
     margin-bottom: 15px; 
 }
@@ -202,7 +198,6 @@ footer {
     font-size: 1.2rem; 
 }
 
-/* Lijst van Sociale Media */
 .footer-content .social-media-list ul {
     list-style: none;
     padding: 0;
@@ -222,6 +217,7 @@ footer {
     text-decoration: none;
     color: #F5F5F5;
     width: 100%; 
+    padding-top: 12px;
 }
 
 .footer-content .social-media-list ul li a i {
